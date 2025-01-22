@@ -9,6 +9,8 @@ public class Apps : MonoBehaviour
     public GameObject obj_pic;
     public Transform tr_menu_lits_pic;
 
+    public IronSourceAds ads;
+
     [Header("Panel Ui")]
     public GameObject panel_home;
     public GameObject panel_play;
@@ -27,6 +29,10 @@ public class Apps : MonoBehaviour
     {
         this.carrot.Load_Carrot(this.check_exit_app);
         this.carrot.game.load_bk_music(this.sound_bk);
+        this.ads.On_Load();
+        this.ads.onRewardedSuccess=this.carrot.game.OnRewardedSuccess;
+        this.carrot.game.act_click_watch_ads_in_music_bk=this.ads.ShowRewardedVideo;
+        this.carrot.act_buy_ads_success=this.ads.RemoveAds;
 
         this.panel_home.SetActive(true);
         this.panel_play.SetActive(false);
@@ -65,7 +71,7 @@ public class Apps : MonoBehaviour
 
     public void btn_play(int index_pic)
     {
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         for(int i = 0; i < this.pic.Length; i++)
         {
             this.pic[i].gameObject.SetActive(false);
@@ -81,7 +87,7 @@ public class Apps : MonoBehaviour
 
     public void btn_back_home()
     {
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         this.carrot.play_sound_click();
         this.panel_play.SetActive(false);
         this.panel_home.SetActive(true);
@@ -90,19 +96,19 @@ public class Apps : MonoBehaviour
 
     public void btn_rate()
     {
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         this.carrot.show_rate();
     }
 
     public void btn_share()
     {
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         this.carrot.show_share();
     }
 
     public void btn_setting()
     {
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.show_ads_Interstitial();
         Carrot.Carrot_Box box_setting=this.carrot.Create_Setting();
     }
 

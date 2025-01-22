@@ -1,3 +1,8 @@
 
 /Library
 /obj
+/.utmp
+/Assets/ExternalDependencyManager
+/Assets/LevelPlay
+/Logs
+/Temp
