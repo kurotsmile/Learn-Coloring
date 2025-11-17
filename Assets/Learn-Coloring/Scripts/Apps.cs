@@ -30,15 +30,15 @@ public class Apps : MonoBehaviour
         this.carrot.Load_Carrot(this.check_exit_app);
         this.carrot.game.load_bk_music(this.sound_bk);
         this.ads.On_Load();
-        this.ads.onRewardedSuccess=this.carrot.game.OnRewardedSuccess;
-        this.carrot.game.act_click_watch_ads_in_music_bk=this.ads.ShowRewardedVideo;
-        this.carrot.act_buy_ads_success=this.ads.RemoveAds;
+        this.ads.onRewardedSuccess = this.carrot.game.OnRewardedSuccess;
+        this.carrot.game.act_click_watch_ads_in_music_bk = this.ads.ShowRewardedVideo;
+        this.carrot.act_buy_ads_success = this.ads.RemoveAds;
 
         this.panel_home.SetActive(true);
         this.panel_play.SetActive(false);
         this.obj_pic.SetActive(false);
         this.create_list_menu_thumb();
-        this.level = PlayerPrefs.GetInt("level",0);
+        this.level = PlayerPrefs.GetInt("level", 0);
         this.txt_level.text = this.level.ToString();
     }
 
@@ -54,8 +54,8 @@ public class Apps : MonoBehaviour
     private void create_list_menu_thumb()
     {
         this.carrot.clear_contain(this.tr_menu_lits_pic);
-        
-        for(int i = 0; i < this.pic.Length; i++)
+
+        for (int i = 0; i < this.pic.Length; i++)
         {
             var index_pic = i;
             GameObject obj_thumb = Instantiate(this.thumb_menu_prefab);
@@ -72,7 +72,7 @@ public class Apps : MonoBehaviour
     public void btn_play(int index_pic)
     {
         this.ads.show_ads_Interstitial();
-        for(int i = 0; i < this.pic.Length; i++)
+        for (int i = 0; i < this.pic.Length; i++)
         {
             this.pic[i].gameObject.SetActive(false);
         }
@@ -109,7 +109,7 @@ public class Apps : MonoBehaviour
     public void btn_setting()
     {
         this.ads.show_ads_Interstitial();
-        Carrot.Carrot_Box box_setting=this.carrot.Create_Setting();
+        Carrot.Carrot_Box box_setting = this.carrot.Create_Setting();
     }
 
     public void btn_user()

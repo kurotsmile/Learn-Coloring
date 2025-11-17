@@ -10783,7 +10783,6 @@ GameObject:
   - component: {fileID: 1475580220786111151}
   - component: {fileID: 729575684524008790}
   - component: {fileID: 9110618599252588336}
-  - component: {fileID: 615434173076212490}
   m_Layer: 0
   m_Name: App
   m_TagString: Untagged
@@ -10827,7 +10826,7 @@ MonoBehaviour:
   paint: {fileID: 9110618599252588336}
   obj_pic: {fileID: 7250179314804883465}
   tr_menu_lits_pic: {fileID: 7392272708143535252}
-  ads: {fileID: 615434173076212490}
+  ads: {fileID: 0}
   panel_home: {fileID: 2772657066482492341}
   panel_play: {fileID: 7666873928134254446}
   txt_level: {fileID: 7209222412601603037}
@@ -10935,24 +10934,6 @@ MonoBehaviour:
   color_tool:
     serializedVersion: 2
     rgba: 0
---- !u!114 &615434173076212490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3946747253225396317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d205bd13d2688484a802323bce81074e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count_step_show_interstitial: 5
-  emplement_Ads: []
-  app_key: 20cfa92bd
-  id_banner: f02jox5z7xpusl0r
-  id_video: 1bistan5u910mlq3
-  id_rewarded: ze3aw85zoosmsvrm
 --- !u!1 &3987660786699525146
 GameObject:
   m_ObjectHideFlags: 0

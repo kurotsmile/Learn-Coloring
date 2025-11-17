@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Learn Coloring.sln"
+    "dotnet.defaultSolution": "Learn-Coloring.slnx"
 }
